@@ -1,3 +1,4 @@
+// INTRODUCTION
 // Example of using template literals with strings and then running code in Node
 let noun1 = "Kit";
 let adjective = "silly";
@@ -16,3 +17,11 @@ $ node app.js
 The world's's first Kit was a very silly dog who loved to funny while eating house for every meal.
 $ 
 */
+
+// THE CONSOLE MODULE
+
+const petsArray = ["dog", "cat", "bird", "monkey"];
+
+console.log(petsArray);
+console.table(petsArray);
+console.assert(petsArray.length > 5);
