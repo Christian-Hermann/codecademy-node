@@ -19,9 +19,46 @@ $
 */
 
 // THE CONSOLE MODULE
+// Exercise using log, table, and assert
 
 const petsArray = ["dog", "cat", "bird", "monkey"];
 
 console.log(petsArray);
 console.table(petsArray);
 console.assert(petsArray.length > 5);
+
+// run in Node
+/*
+[ 'dog', 'cat', 'bird', 'monkey' ]
+┌─────────┬──────────┐
+│ (index) │ Values   │
+├─────────┼──────────┤
+│ 0       │ 'dog'    │
+│ 1       │ 'cat'    │
+│ 2       │ 'bird'   │
+│ 3       │ 'monkey' │
+└─────────┴──────────┘
+Assertion failed
+*/
+
+// THE PROCESS MODULE EXERCISE
+let initialMemory = null;
+let word = null;
+
+console.log(`Your word is ${word}`);
+
+// Create a new array
+let wordArray = [];
+
+// Loop 1000 times, pushing into the array each time
+for (let i = 0; i < 1000; i++) {
+  wordArray.push(`${word} count: ${i}`);
+}
+
+console.log(
+  `Starting memory usage: ${initialMemory}. \nCurrent memory usage: ${
+    process.memoryUsage().heapUsed
+  }. \nAfter using the loop to add elements to the array, the process is using ${
+    process.memoryUsage().heapUsed - initialMemory
+  } more bytes of memory.`
+);
