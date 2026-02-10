@@ -62,3 +62,5 @@ console.log(
     process.memoryUsage().heapUsed - initialMemory
   } more bytes of memory.`
 );
+
+// THE OS MODULE
