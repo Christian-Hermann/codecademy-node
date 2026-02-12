@@ -117,3 +117,27 @@ async function tryGetTrailDistance(trailName) {
     console.log(`Trail not found ${trailName}`);
   }
 }
+
+/*
+Node.js is a JavaScript runtime, an environment that allows us to execute our JavaScript code by converting it into something a computer can understand.
+REPLs are processes that read, evaluate, print, and repeat (loop), and Node.js comes with its own REPL we can access in our terminal with the node command.
+We run JavaScript programs with Node in the terminal by typing node followed by the absolute or relative path to the file (relative to the working directory in the terminal).
+Code can be organized into separate files, or modules. Modules may be used in another file importing them with the require() function.
+Core modules are built into the Node.js environment to efficiently perform common tasks.
+The console module exports a global console object allowing the terminal to act as a debugging console, similar to the JavaScript console object provided by web browsers.
+The process module is a global module that gives access to information about the Node.js runtime environment.
+The os module provides 
+methods
+Preview: Docs Loading link description
+to retrieve information about the computer, operating system, and network interfaces.
+The util module contains methods used to maintain and debug your code.
+*/
+
+// What does the REPL acronym mean
+// Read Eval Print Loop
+
+// What do we call modules included with tthe Node.js environment to perform common taks efficiently?
+// Core Modules
+
+// Whic Node function allows us to bring modules intoa process?
+// require() - It loads another file or module so that we can use it.
