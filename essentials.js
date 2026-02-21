@@ -61,3 +61,16 @@ console.log(bufferAlloc);
 console.log("Buffer 1:", buffer1, "Buffer 2:", buffer2);
 console.log(bufferConcat);
 console.log(bufferString);
+
+// THE FS MODULE
+const fs = require("fs");
+
+let secretWord = "cheeseburgerpizzabagels";
+
+fs.readFile("finalFile.txt", "utf8", (error, data) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(data);
+  }
+});
