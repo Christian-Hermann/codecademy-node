@@ -74,3 +74,17 @@ fs.readFile("finalFile.txt", "utf8", (error, data) => {
     console.log(data);
   }
 });
+
+// READABLE STREAMS
+const readline = require("readline");
+const fs = require("fs");
+
+const myInterface = readline.createInterface({
+  input: fs.createReadStream("shoppingList.txt"),
+});
+
+printData = (data) => {
+  console.log(`Item: ${data}`);
+};
+
+myInterface.on("line", printData);
