@@ -88,3 +88,5 @@ printData = (data) => {
 };
 
 myInterface.on("line", printData);
+
+// THE TIMERS MODULE
