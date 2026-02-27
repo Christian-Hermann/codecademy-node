@@ -1,8 +1,10 @@
 const fs = require("fs");
 // TODO: Require the http module
-
+const http = require("http");
 // TODO: Create a server
-
+const server = http.createServer((req, res) => {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+});
 // TODO: Create a url object with request url and host name
 
 // TODO: Create a switch statement based on pathname of url
