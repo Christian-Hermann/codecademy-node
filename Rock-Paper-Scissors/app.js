@@ -4,8 +4,15 @@ const http = require("http");
 // TODO: Create a server
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
+  switch (url.pahtname) {
+    case "/":
+      // code
+      break;
+    default:
+      // code
+      break;
+  }
 });
-// TODO: Create a url object with request url and host name
 
 // TODO: Create a switch statement based on pathname of url
 
