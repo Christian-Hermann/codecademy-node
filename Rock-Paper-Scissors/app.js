@@ -12,25 +12,23 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {
           "Content-type": "text/html",
         });
+        fs.createReadStream("index.html").pipe(res);
+      } else if (req.method === "POST") {
+        handlePostResponse(req, res);
       }
       break;
     default:
-      // code
+      res.writeHead(404, {
+        "Content-Type": "text/html",
+      });
+      fs.createReadStream("404.html").pipe(res);
       break;
   }
 });
 
-// TODO: Get value of 'name' query
-
-// TODO: Write response header
-
-// TODO: Pipe index.html to response
-
-// TODO: Check if request is POST and if so, run handlePostResponse()
-
-// TODO: Write response header
-
-// TODO: Pipe 404.html to response
+server.listen(4001, () => {
+  console.log(`Server is listening on port ${server.address().port}`);
+});
 
 // TODO: Have server listen at port 4001
 
