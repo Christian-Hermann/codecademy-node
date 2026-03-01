@@ -6,17 +6,19 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   switch (url.pahtname) {
     case "/":
-      // code
+      if (req.method === "GET") {
+        const name = url.searchParams.get("name");
+        console.log(name);
+        res.writeHead(200, {
+          "Content-type": "text/html",
+        });
+      }
       break;
     default:
       // code
       break;
   }
 });
-
-// TODO: Create a switch statement based on pathname of url
-
-// TODO: Check if request method is GET
 
 // TODO: Get value of 'name' query
 
